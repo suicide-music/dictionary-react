@@ -8,8 +8,22 @@ function App() {
       <h1>Dictionary App </h1>
       <Dictionary />
       <footer>
-        Coded by Viktorija Koluzajeva
-        <br /> GitHub
+        Coded by{" "}
+        <a
+          href="https://www.linkedin.com/in/viktorija-koluzajeva/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Viktorija Koluzajeva
+        </a>
+        <br />
+        <a
+          href="https://github.com/suicide-music"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
       </footer>
     </div>
   );
