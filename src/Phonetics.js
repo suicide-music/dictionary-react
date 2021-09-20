@@ -15,9 +15,9 @@ export default function Phonetics(props) {
     );
   } else {
     return (
-      <div className="Phonetics">
+      <div className="Phonetics no-sound">
         {" "}
-        <h2>/{props.phonetic.text}/</h2>
+        <h2> /{props.phonetic.text}/</h2>
       </div>
     );
   }
