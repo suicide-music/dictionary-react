@@ -38,7 +38,9 @@ export default function Dictionary() {
             className="btn btn-primary"
           />
         </form>
-        <span>suggested words: science, power, history... </span>
+        <span className="suggestions">
+          suggested words: science, power, history...
+        </span>
       </section>
       <section>
         <Results results={results} />

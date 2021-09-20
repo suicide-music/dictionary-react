@@ -25,3 +25,21 @@
 #search-button:hover {
   background-color: #db288b;
 }
+@media (max-width: 767px) {
+  #search-form {
+    width: 90%;
+  }
+  .Dictionary h2 {
+    text-align: center;
+  }
+  #search-button {
+    width: 90%;
+  }
+  form {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .suggestions {
+    font-size: 12px;
+  }
+}

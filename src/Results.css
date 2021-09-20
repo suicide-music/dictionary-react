@@ -9,3 +9,12 @@
 .word-pronunciation {
   margin-left: 8px;
 }
+
+@media (max-width: 767px) {
+  .Results h2 {
+    text-align: left;
+  }
+  .Results section {
+    margin: 0;
+  }
+}

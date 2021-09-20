@@ -14,3 +14,8 @@ a {
 a:hover {
   color: #db288b;
 }
+@media (max-width: 767px) {
+  body {
+    padding: 5px;
+  }
+}
