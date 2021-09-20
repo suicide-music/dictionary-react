@@ -40,7 +40,12 @@ export default function Dictionary(props) {
             look up?
           </h2>
           <form onSubmit={handleSubmit}>
-            <input type="search" id="search-form" onChange={handleWordChange} />
+            <input
+              type="search"
+              id="search-form"
+              onChange={handleWordChange}
+              defaultValue={props.defaultWord}
+            />
             <input
               type="submit"
               id="search-button"
