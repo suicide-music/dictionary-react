@@ -24,11 +24,25 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <form onSubmit={search}>
-        <input type="search" onChange={handleWordChange} />
-        <input type="submit" value="Search" />
-      </form>
-      <Results results={results} />
+      <section>
+        <h2>
+          <i className="fas fa-spell-check"></i> What word would you like to
+          look up?
+        </h2>
+        <form onSubmit={search}>
+          <input type="search" id="search-form" onChange={handleWordChange} />
+          <input
+            type="submit"
+            id="search-button"
+            value="Search"
+            className="btn btn-primary"
+          />
+        </form>
+        <span>suggested words: science, power, history... </span>
+      </section>
+      <section>
+        <Results results={results} />
+      </section>
     </div>
   );
 }

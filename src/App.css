@@ -1,5 +1,16 @@
 body {
-  text-align: center;
   margin: 0 auto;
-  padding-top: 30px;
+  padding: 50px;
+  font-family: "Roboto Slab", serif;
+  background-color: #95818d10;
+  color: #122932;
+  text-align: center;
+}
+
+a {
+  color: #db84b4;
+}
+
+a:hover {
+  color: #db288b;
 }
