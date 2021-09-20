@@ -1,9 +1,9 @@
 .Results section {
   background-color: white;
-  padding: 15px;
+  padding: 2x;
   text-align: left;
   border-radius: 10px;
-  margin: 30px;
+  margin: 4px;
   box-shadow: 0 0 0 rgb(0 0 0 /10%);
 }
 .word-pronunciation {
