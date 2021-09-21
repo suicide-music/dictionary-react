@@ -2,7 +2,6 @@ import React from "react";
 import "./Pictures.css";
 
 export default function Pictures(props) {
-  console.log(props.photos);
   if (props.photos) {
     return (
       <div className="Pictures">
