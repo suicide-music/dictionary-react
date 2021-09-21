@@ -3,11 +3,13 @@ import "./Dictionary.css";
 import { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import Pictures from "./Pictures";
 
 export default function Dictionary(props) {
   let [word, setWord] = useState(props.defaultWord);
   let [results, setResults] = useState(null);
   let [loaded, setLoaded] = useState(false);
+  let [photos, setPhotos] = useState(null);
 
   function load() {
     setLoaded(true);
@@ -21,10 +23,22 @@ export default function Dictionary(props) {
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleResponse);
+
+    let pexelsApiKey =
+      "563492ad6f917000010000013e2c1f6f0f3d4bc7afdcb8fad77a0723";
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=6`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsUrl, { headers: headers }).then(handlePexelResponse);
   }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
+  }
+
+  function handlePexelResponse(response) {
+    console.log(response);
+    setPhotos(response.data.photos);
   }
 
   function handleWordChange(event) {
@@ -59,6 +73,9 @@ export default function Dictionary(props) {
         </section>
         <section>
           <Results results={results} />
+        </section>
+        <section>
+          <Pictures photos={photos} />
         </section>
       </div>
     );

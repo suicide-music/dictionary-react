@@ -1,0 +1,10 @@
+.Pictures img {
+  border-radius: 10px;
+  width: 400px;
+  margin: 30px;
+}
+
+.Pictures {
+  padding: 30px 30px;
+  text-align: center;
+}
